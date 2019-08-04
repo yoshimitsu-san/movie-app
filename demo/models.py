@@ -6,5 +6,5 @@ class Book(models.Model):
     description = models.TextField(blank=True, max_length=256)
     is_published = models.BooleanField(default=False)
     published = models.DateField(blank=True, null=True, default=None)
-    price = models.DecimalField(default=0, decimal_places=2, max_digits=3)
+    price = models.DecimalField(default=0, decimal_places=2, max_digits=8)
     cover = models.ImageField(blank=True, upload_to='covers/')
