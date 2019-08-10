@@ -9,8 +9,16 @@
 </head>
 
 <body>
-    <h1>This is my first template</h1>
-    <h2>This is my page</h2>
+
+    <h1>Template</h1>
+    <h2>List of book titles in DB</h2>
+
+    {% for book in books %}
+    {% if book.is_published %}
+    <ul>{{ book.title }}</ul>
+    {% endif %}
+    {% endfor %}
+
 </body>
 
 </html>
