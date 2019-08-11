@@ -30,3 +30,12 @@ class Character(models.Model):
 
     def __str__(self):
         return(self.name)
+
+
+class Auhtor(models.Model):
+    name = models.CharField(max_length=30)
+    surname = models.CharField(max_length=30)
+    books = models.ManyToManyField(Book, related_name='auhtors')
+
+    def __str__(self):
+        return(self.surname)
